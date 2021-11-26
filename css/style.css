@@ -118,12 +118,12 @@ footer a {
 
     header {
         position: initial;
-        background-color: white;
-        color: #3b576d;        
+        background-color: white;        
     }
 
-    div.logo {
-        color: #3b576d;
+    header .menu-line {
+        height: 3px;
+        background-color: #000;
     }
 
     .container {
@@ -149,6 +149,10 @@ footer a {
     }
 
     @media (max-width: 500px) {
+        header .menu-line {
+            height: 3px;
+            background-color: #000;
+        }
         .container .rightside .info .name{
             font-size: 50px;
         }
