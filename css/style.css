@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    display: flex; /*automaticamente as duas divs ficaram em linha, uma ao lado da outra*/
+    justify-content: space-between;/*alinhamento justificado com espaço entre as divs, ficando cada uma numa extremidade*/
+    align-items: center;
+    padding: 30px;
+    position: fixed;    
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b576d;
+}
+
+header .menu {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu-line {
+    height: 3px;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.container .leftside {
+    flex: 1;
+    background-image: url('../images/lety.jpg'); /*os  ..  significam que a imagem está uma pasta vizinha do css*/
+    background-size: cover; /*ao inves de 100% center, cover melhora a responsividade*/
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.container .rightside {    
+    flex: 1;
+    background-color: #3b576d;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.container .info {
+    color: white;
+}
+
+.container .info .profession {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.container .info .name {
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 10px;
+}
+
+.container .info .buttons a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    background-color: #fff;
+    color: #3b576d;
+    padding: 20px 40px;
+    font-size: large;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    box-shadow: 0px 20px 30px  #171b1f52;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.container .info .buttons a.hire {
+    color: #35556d;
+}
+
+.container .info .buttons a.more {
+    color: white;
+    background-color: #677c8d;
+}
+
+.container .info .buttons a:hover {
+    opacity: 0.8;
+
+}
+footer {
+    position: fixed;
+    left: 1;
+    right: 0;
+    bottom: 0;
+    padding: 20px 270px 20px 20px;
+    color: #fff;
+    font-size: 13px;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 965px) {
+
+    header {
+        position: initial;
+        background-color: white;
+        color: #3b576d;        
+    }
+
+    div.logo {
+        color: #3b576d;
+    }
+
+    .container {
+        flex-direction: column;
+        height: calc(100vh - 89px);
+    }
+
+    .container .rightside {
+        flex: 1;
+        padding: 30px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer {
+        position: initial; /*mantém o texto bem próximo do rodapé*/
+        background-color: #fff;
+        color: #000          
+    }
+
+    footer a {
+        color: white;
+    }
+
+    @media (max-width: 500px) {
+        .container .rightside .info .name{
+            font-size: 50px;
+        }
+        .container .rightside .info .buttons a {
+            display: block;
+            margin-right: 0px;
+            position: center;
+        }
+        footer {
+            padding: 20px 20px 20px 20px;
+        }
+
+        footer a {
+            color: #000;
+        }
+    }
+}
