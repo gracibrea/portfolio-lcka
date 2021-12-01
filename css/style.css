@@ -127,7 +127,7 @@ footer a {
     }
 
     .container {
-        flex-direction: column;
+        flex-direction:column-reverse;
         height: calc(100vh - 89px);
     }
 
@@ -136,6 +136,9 @@ footer a {
         padding: 30px 20px;
         justify-content: center;
         text-align: center;
+    }
+    .container .rightside .info .name{
+        font-size: 50px;
     }
 
     footer {
@@ -154,7 +157,7 @@ footer a {
             background-color: #000;
         }
         .container .rightside .info .name{
-            font-size: 50px;
+            font-size: 40px;
         }
         .container .rightside .info .buttons a {
             display: block;
